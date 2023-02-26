@@ -3,7 +3,6 @@ import csv
 import random
 import math
 import operator
-import matplotlib.pyplot as plt
 
 def loadDataset(current_path, filename, split, trainingSet=[] , testSet=[]):
 	'''Loads the dataset from the current_path and filename and splits it according to the split ratio into trainingSet and testSet'''
@@ -134,10 +133,6 @@ def main(dataset_name):
 		print('Accuracy: ' + repr(accuracy) + '%')
 
 	print('Overall Accuracy: '+ str(sum(acc)/len(acc)) + "%")
-	plt.plot(ks, acc)
-	plt.xlabel('K')
-	plt.ylabel('Accuracy')
-	plt.show()
 	
 	print('Find the results at: ' + results_path)
 
