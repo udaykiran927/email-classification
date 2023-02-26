@@ -11,22 +11,14 @@
     <div class="container">
       <div class="title"><marquee><b>BBC NEWS CLASSIFICATION</b></marquee></div>
       <div class="content">
-        <form action="{{url_for('choice')}}" method="POST">
+        <form action="{{url_for('predict')}}" method="POST">
           <center><div class="user-details">
             <div class="input-box">
-              <table border="0">
-                <tr>
-                    <td><b>1.Classify Using Knn</b></td>
-                </tr>
-                <tr>
-                    <td><b>2.Classify using Mnb</b></td>
-                </tr>
-                <tr>
-                    <td><b>3.Exit</b></td>
-                </tr>
-              </table>
-              <span class="details"><b>Enter your choice</b></span>
-              <input type="text" name="news" placeholder="Your Text" required>
+              <span class="details"><b>Enter your mail</b></span>
+              <input type="text" name="news" placeholder="Your mail id" required>
+              <br>
+              <span class="details"><b>password</b></span>
+              <input type="text" name="news" placeholder="Your password" required>
             </div>
           </div></center>
           <center><div class="button">
@@ -35,7 +27,7 @@
           <br></center>
           
 
-          <center><div><b>{{ pred }}</b></div></center>
+          <center><div><b>{{ msg }}</b></div></center>
         </form>
       </div>
     </div>
